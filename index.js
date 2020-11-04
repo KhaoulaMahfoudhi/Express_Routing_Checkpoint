@@ -15,7 +15,7 @@ function logger (req, res , next){
     let time = new Date().getHours();
     let dt = new Date(); 
 
-    if ( (dt.getDay() < 6 && dt.getDay() > 0) && (time >9 && time <17 )){
+    if ( (dt.getDay() < 6 && dt.getDay() > 0) && (time >=9 && time <= 17 )){
         app.use(express.static(path.join(__dirname, 'public')));
         console.log("log");
     } else{
